@@ -1,0 +1,2 @@
+echo ######## | sudo -S apt-get remove openvpn -y
+echo y | sudo -S apt install openvpn=2.5.8-focal0 -V

@@ -1,0 +1,2 @@
+cd "/home/otk/Desktop/Script/LeakTestIPandDNS/"
+python3 '/home/otk/Desktop/Script/LeakTestIPandDNS/IpTablesOVPN.py'

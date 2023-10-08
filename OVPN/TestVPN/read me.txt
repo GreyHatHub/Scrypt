@@ -1,0 +1,8 @@
+надо в файле *.ovpn заменить строку
+cipher AES-128-CBC
+на
+data-ciphers AES-256-GCM:AES-128-GCM:BF-CBC
+или
+data-ciphers AES-256-GCM:AES-128-GCM:AES-128-CBC
+или
+data-ciphers AES-256-GCM:AES-128-CBC:DESX-CBC

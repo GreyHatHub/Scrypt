@@ -1,0 +1,43 @@
+=========================================DNS===============================================
+https://browserleaks.com/
+
+
+1. Устанавливаем пакет openresolv:
+
+для дистрибутивов Ubuntu и подобных:
+	# sudo apt install openresolv
+
+для дистрибутивов Arch и подобных:
+	# sudo pacman -S openresolv
+
+2. Отключаем systemd-resolved:
+	# sudo systemctl disable systemd-resolved.service
+	# sudo systemctl stop systemd-resolved
+
+Редактируем файл NetworkManager.conf
+	# sudo nano /etc/NetworkManager/NetworkManager.conf
+
+Сразу под Main дописываем строчку:
+	# dns=none
+
+Сохраняем изменения с помощью комбинации клавиш Ctrl+O и Ctrl+X.
+
+3. Перезагружаем систему и выполняем следующие команды. Так как на resolv.conf создан симлинк, то мы его удаляем:
+	# sudo rm /etc/resolv.conf
+
+И создаём новый:
+	# sudo nano /etc/resolv.conf
+
+Отобразится терминал с пустым файлом. Дописываем (можно указать любой DNS-сервер):
+	# nameserver 1.1.1.1
+
+Сохраняем изменения с помощью комбинации клавиш Ctrl+O и Ctrl+X.
+
+Перезагружаем систему.
+
+=========================================IP===============================================
+Сохранить настройки
+iptables-save > /home/otk/Downloads/DefIptablesRule.v4
+
+Загрузить настройки
+iptables-restore < /home/otk/Downloads/IpTables.v4

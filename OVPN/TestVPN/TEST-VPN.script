@@ -1,0 +1,2 @@
+cd "/home/otk/Desktop/Script/TestVPN/"
+python3 '/home/otk/Desktop/Script/TestVPN/START_VPN.py'
